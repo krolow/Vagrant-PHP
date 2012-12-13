@@ -1,0 +1,10 @@
+deb http://ftp.br.debian.org/debian stable main
+deb-src http://ftp.br.debian.org/debian stable main
+
+deb http://ftp.debian.org/debian/ squeeze-updates main
+deb-src http://ftp.debian.org/debian/ squeeze-updates main
+
+deb http://security.debian.org/ squeeze/updates main
+deb-src http://security.debian.org/ squeeze/updates main
+
+deb http://packages.dotdeb.org/ squeeze-php54 all
