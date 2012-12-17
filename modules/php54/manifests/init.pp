@@ -4,7 +4,7 @@ class php54 {
             ensure => file,
             owner => root,
             group => root,
-            source => "puppet:///modules/php54/sources.list"
+            source => "puppet:///modules/php54/sources.list",
     }
 
     exec { 
