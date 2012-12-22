@@ -40,7 +40,4 @@ class php54 {
             require => Exec["/usr/bin/apt-get update"],
             notify => Service[""]
     }
-}    R$ 1.163,76
-
-65 - 100
-x - 40
+}
