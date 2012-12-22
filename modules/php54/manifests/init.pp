@@ -30,7 +30,8 @@ class php54 {
         "php5-intl", 
         "php5-xdebug", 
         "php5-sqlite", 
-        "php5-dev"
+        "php5-dev",
+        "php5-fpm"
     ]
 
     package { 
@@ -39,4 +40,7 @@ class php54 {
             require => Exec["/usr/bin/apt-get update"],
             notify => Service[""]
     }
-}    
+}    R$ 1.163,76
+
+65 - 100
+x - 40

@@ -1,0 +1,6 @@
+[submodule "modules/mysql"]
+	path = modules/mysql
+	url = git://github.com/example42/puppet-mysql.git
+[submodule "modules/phpqatools"]
+	path = modules/phpqatools
+	url = git://github.com/example42/puppet-mysql.git

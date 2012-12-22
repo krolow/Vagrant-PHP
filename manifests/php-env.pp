@@ -4,8 +4,10 @@ class php-env {
 
     include php54
     include git
-    #include vim
-    #include oh-my-zsh
+    include vim
+    include oh-my-zsh
+    include mysql
+    include phpqatools
 }
 
 include php-env
