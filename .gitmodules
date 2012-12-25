@@ -1,6 +1,3 @@
-[submodule "modules/mysql"]
-	path = modules/mysql
-	url = git://github.com/example42/puppet-mysql.git
 [submodule "modules/phpqatools"]
 	path = modules/phpqatools
 	url = git://github.com/rafaelfelix/puppet-phpqatools.git
@@ -10,3 +7,9 @@
 [submodule "modules/pear"]
 	path = modules/pear
 	url = git://github.com/rafaelfelix/puppet-pear.git
+[submodule "modules/composer"]
+	path = modules/composer
+	url = git://github.com/willdurand/puppet-composer.git
+[submodule "modules/mysql"]
+	path = modules/mysql
+	url = git://github.com/puppetlabs/puppetlabs-mysql.git
