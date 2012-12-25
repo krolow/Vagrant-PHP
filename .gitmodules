@@ -3,4 +3,7 @@
 	url = git://github.com/example42/puppet-mysql.git
 [submodule "modules/phpqatools"]
 	path = modules/phpqatools
-	url = git://github.com/example42/puppet-mysql.git
+	url = git://github.com/rafaelfelix/puppet-phpqatools.git
+[submodule "modules/puppi"]
+	path = modules/puppi
+	url = git://github.com/example42/puppi.git
