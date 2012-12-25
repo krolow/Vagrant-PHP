@@ -9,4 +9,4 @@
 	url = git://github.com/example42/puppi.git
 [submodule "modules/pear"]
 	path = modules/pear
-	url = git://github.com/rafaelfelix/puppet-pear
+	url = git://github.com/rafaelfelix/puppet-pear.git
