@@ -8,7 +8,8 @@ class php-env {
     include vim
     include oh-my-zsh
     include mysql
-    include phpqatools
+    #include pear
+    #include phpqatools
 }
 
 include php-env
