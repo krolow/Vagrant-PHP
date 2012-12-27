@@ -2,8 +2,8 @@ class php-env {
     $gitUser = "krolow"
     $gitEmail = "krolow@gmail.com"   
 
-    include puppi
     include php54
+    include puppi
     include git
     include vim
     include oh-my-zsh
