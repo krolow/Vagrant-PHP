@@ -7,6 +7,8 @@ Vagrant::Config.run do |config|
   config.vm.box_url = "http://mathie-vagrant-boxes.s3.amazonaws.com/debian_squeeze_32.box"
   config.vm.forward_port 80, 3030
 
+  #config.vm.share_folder "foo", "/guest/path", "/host/path"
+
   config.vm.provision :puppet do |puppet|
     puppet.manifests_path = "manifests"
     puppet.module_path = "modules"
