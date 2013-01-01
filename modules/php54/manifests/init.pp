@@ -31,7 +31,8 @@ class php54 {
         "php5-xdebug", 
         "php5-sqlite", 
         "php5-dev",
-        "php5-fpm"
+        "php5-fpm",
+        "php5-gd"
     ]
 
     package { 
