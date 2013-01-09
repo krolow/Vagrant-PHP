@@ -1,15 +1,8 @@
-class php-env {
-    $gitUser = "krolow"
-    $gitEmail = "krolow@gmail.com"   
-
-    include php54
-    include puppi
-    include git
-    include vim
-    include oh-my-zsh
-    include mysql
-    #include pear
-    #include phpqatools
+Exec {
+  path => ["/usr/bin", "/bin", "/usr/sbin", "/sbin", "/usr/local/bin", "/usr/local/sbin"]
 }
 
-include php-env
+node default {
+    include params
+    include setup
+}

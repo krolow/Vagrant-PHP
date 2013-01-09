@@ -10,3 +10,12 @@
 [submodule "modules/composer"]
 	path = modules/composer
 	url = git://github.com/willdurand/puppet-composer.git
+[submodule "modules/mysql"]
+	path = modules/mysql
+	url = git://github.com/example42/puppet-mysql.git
+[submodule "modules/percona"]
+	path = modules/percona
+	url = git://github.com/arioch/puppet-percona.git
+[submodule "modules/apache"]
+	path = modules/apache
+	url = git://github.com/example42/puppet-apache.git

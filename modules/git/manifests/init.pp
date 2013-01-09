@@ -1,5 +1,10 @@
 class git {
     
+    exec {
+        "/usr/bin/apt-get update":
+            command => "/usr/bin/apt-get update" 
+    }
+
     package {
         "git":
             ensure => present,
@@ -13,8 +18,8 @@ class git {
     }
 
     $gitConfig = [
-        "/usr/bin/git config --global user.name \"${gitUser}\"",
-        "/usr/bin/git config --global user.email ${gitEmail}",
+        "/usr/bin/git config --global user.name \"${params::gitUser}\"",
+        "/usr/bin/git config --global user.email ${params::gitEmail}",
         "/usr/bin/git config --global alias.st status",
         "/usr/bin/git config --global alias.ci commit",
         "/usr/bin/git config --global alias.co checkout",
