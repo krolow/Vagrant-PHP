@@ -1,12 +1,6 @@
-[submodule "modules/phpqatools"]
-	path = modules/phpqatools
-	url = git://github.com/rafaelfelix/puppet-phpqatools.git
 [submodule "modules/puppi"]
 	path = modules/puppi
 	url = git://github.com/example42/puppi.git
-[submodule "modules/pear"]
-	path = modules/pear
-	url = git://github.com/rafaelfelix/puppet-pear.git
 [submodule "modules/composer"]
 	path = modules/composer
 	url = git://github.com/willdurand/puppet-composer.git

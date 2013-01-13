@@ -1,6 +1,4 @@
 class php54 {
-    
-    include pear
 
     include composer
 
@@ -40,114 +38,22 @@ class php54 {
             notify => Service[""]
     }
 
-    pear::package { "PEAR": 
-        package => "PEAR",
-        require => Package["php5"]
+    package { "php-pear":
+        ensure => latest,
+        require => [Package["php5"], Exec["/usr/bin/apt-get update"]]
     }
 
-    # PHPUnit
-    pear::package { "PHPUnit":
-        package => "PHPUnit",
-        version => "latest",
-        repository => "pear.phpunit.de",
-        require => Pear::Package["PEAR"],
+    exec { "pear upgrade":
+        require => Package["php-pear"]
     }
 
-    # Pdepend
-    pear::package { "PHP_Depend":
-        package => "PHP_Depend",
-        version => "beta",
-        repository => "pear.pdepend.org",
-        require => Pear::Package["PEAR"],
+    exec { "pear config-set auto_discover 1":
+        require => Exec["pear upgrade"]
     }
 
-    # PHPMD
-    pear::package { "PHP_PMD":
-        package => "PHP_PMD",
-        version => "latest",
-        repository => "pear.phpmd.org",
-        require => Pear::Package["PHP_Depend"],
+    exec { "pear install pear.phpqatools.org/phpqatools; true":
+        require => [Exec["pear config-set auto_discover 1"]],
+        timeout => 0
     }
-
-    # PHP CPD
-    pear::package { "Base":
-        package => "Base",
-        version => "latest",
-        repository => "components.ez.no",
-        require => Pear::Package["PEAR"],
-    }
-
-    pear::package { "ConsoleTools":
-        package => "ConsoleTools",
-        version => "latest",
-        repository => "components.ez.no",
-        require => Pear::Package["Base"],
-    }
-
-    pear::package { "File_Iterator":
-        package => "File_Iterator",
-        version => "latest",
-        repository => "pear.phpunit.de",
-        require => Pear::Package["PEAR"],
-    }
-
-    pear::package { "phpcpd":
-        package => "phpcpd",
-        version => "latest",
-        repository => "pear.phpunit.de",
-        require => Pear::Package["Base"],
-    }
-
-    # PHPLOC
-    pear::package { "phploc":
-        package => "phploc",
-        version => "latest",
-        repository => "pear.phpunit.de",
-        require => Pear::Package["Base"],
-    }
-
-    # PHPDCD
-    pear::package { "phpdcd":
-        package => "phpdcd",
-        version => "latest",
-        repository => "pear.phpunit.de",
-        require => Pear::Package["Base"],
-    }
-
-    # PHP_CodeSniffer
-    pear::package { "PHP_CodeSniffer":
-        package => "PHP_CodeSniffer",
-        version => "latest",
-        repository => "pear.php.net",
-        require => Pear::Package["PEAR"],
-    }
-
-    # Bytekit
-    pear::package { "bytekit":
-        package => "bytekit",
-        version => "latest",
-        repository => "pear.phpunit.de",
-        require => Pear::Package["File_Iterator"],
-    }
-
-    # Phing
-    pear::package { "Phing":
-        package => "Phing",
-        version => "latest",
-        repository => "pear.phing.info",
-        require => Pear::Package["PEAR"],
-    }
-
-    pear::package { "phpDox":
-        package => "phpDox",
-        version => 'latest',
-        repository => "pear.netpirates.net"
-    }
-
-    pear::package { "DocBlox":
-        package => "DocBlox",
-        version => 'latest',
-        repository => "pear.docblox-project.org"
-    }    
 
 }
