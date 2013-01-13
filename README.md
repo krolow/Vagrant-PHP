@@ -18,7 +18,7 @@ My vagrant environment for PHP.
 
 ```bash
 git clone git://github.com/krolow/Vagrant-PHP.git
-git sumodule update --init
+git submodule update --init
 vagrant up
 ```
 
