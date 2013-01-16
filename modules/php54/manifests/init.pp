@@ -28,7 +28,8 @@ class php54 {
         "php5-dev",
         "php5-fpm",
         "php5-gd",
-        "php5-curl"
+        "php5-curl",
+        "php5-mysql"
     ]
 
     package { 
