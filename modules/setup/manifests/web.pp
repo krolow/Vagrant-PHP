@@ -10,8 +10,8 @@ class setup::web {
     exec { "disable default virtual host from ${name}":
         command => "a2dissite default",
         onlyif  => "test -L ${apache::params::config_dir}/sites-enabled/000-default",
-        notify  => Service["apache"],
-        require => Package["apache"],
+        notify  => Service["httpd"],
+        require => Package["httpd"],
     }
 
     include php54
