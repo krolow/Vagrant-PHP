@@ -10,6 +10,3 @@
 [submodule "modules/percona"]
 	path = modules/percona
 	url = git://github.com/arioch/puppet-percona.git
-[submodule "modules/apache"]
-	path = modules/apache
-	url = git://github.com/example42/puppet-apache.git
